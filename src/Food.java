@@ -4,8 +4,8 @@ public class Food extends Dish {
     private boolean sugar;
     private boolean hot;
 
-    public Food(String name, List<Ingredient> ingredients, double price, boolean sugar, boolean hot) {
-        super(name, ingredients, price);
+    public Food(String name, List<Ingredient> ingredients, boolean sugar, boolean hot) {
+        super(name, ingredients);
         this.sugar = sugar;
         this.hot = hot;
     }

@@ -4,12 +4,11 @@ import java.util.List;
 public abstract class Dish {
     protected String name;
     protected List<Ingredient> ingredients;
-    public double price;
+    protected double price;
 
-    public Dish(String name, List<Ingredient> ingredients,  double price) {
+    public Dish(String name, List<Ingredient> ingredients) {
         this.name = name;
         this.ingredients = ingredients;
-        this.price = price + 1000;
     }
 
     public String getName() {
@@ -28,13 +27,9 @@ public abstract class Dish {
         this.ingredients = ingredients;
     }
 
-    public double getPrice() {
-        return price;
-    }
+    public double getPrice() { return price; }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+    public void setPrice(double price) { this.price = price; }
 
     public double getIngredientPrice() {
         double cost = 0;
@@ -42,6 +37,16 @@ public abstract class Dish {
             cost += i.getPrice();
         }
         return cost;
+    }
+
+    public void getIngredientList(){
+        for (Ingredient i : getIngredients()){
+            System.out.println("- " + i.getName());
+        }
+    }
+
+    public void print(){
+        System.out.println(getName() + ": " + calculateCost() + "\n");
     }
 
     public abstract double calculateCost();

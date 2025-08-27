@@ -22,4 +22,8 @@ public class Ingredient {
         this.name = name;
         this.price = price;
     }
+
+    public void printIngredient(){
+        System.out.println(getName() + ": " + getPrice() + "\n");
+    }
 }

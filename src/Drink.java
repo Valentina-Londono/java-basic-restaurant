@@ -5,8 +5,8 @@ public class Drink extends Dish {
     private boolean juice;
     private boolean alcohol;
 
-    public Drink(String name, List<Ingredient> ingredients, double price, boolean milkshake, boolean juice, boolean alcohol) {
-        super(name, ingredients, price);
+    public Drink(String name, List<Ingredient> ingredients, boolean milkshake, boolean juice, boolean alcohol) {
+        super(name, ingredients);
         this.milkshake = milkshake;
         this.juice = juice;
         this.alcohol = alcohol;

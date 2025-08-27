@@ -5,8 +5,8 @@ public class Dessert extends Dish {
     private boolean hot;
     private int calories;
 
-    public Dessert(String name, List<Ingredient> ingredients, double price, boolean cold, boolean hot, int calories) {
-        super(name, ingredients, price);
+    public Dessert(String name, List<Ingredient> ingredients, boolean cold, boolean hot, int calories) {
+        super(name, ingredients);
         this.cold = cold;
         this.hot = hot;
         this.calories = calories;
